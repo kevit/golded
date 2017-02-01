@@ -1,0 +1,145 @@
+
+##  ------------------------------------------------------------------
+##  The Goldware Library. Copyright (C) Odinn Sorensen.
+##  ------------------------------------------------------------------
+##  This program is free software; you can redistribute it and/or
+##  modify it under the terms of the GNU General Public License as
+##  published by the Free Software Foundation; either version 2 of the
+##  License, or (at your option) any later version.
+##
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+##  General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with this program; if not, write to the Free Software
+##  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+##  ------------------------------------------------------------------
+##  $Id: gall.all,v 1.12 2011/02/19 18:45:27 stas_degteff Exp $
+##  ------------------------------------------------------------------
+##  Master build file.
+##  ------------------------------------------------------------------
+
+## CRC and hash calculation.
+gcrc16tb cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrc32tb cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrchash cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrckeyv cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrcm16  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrcm32  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrcs16  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcrcs32  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Debugging.
+gdbgerr  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gdbgexit cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gdbgtrk  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+## Debuging for windows
+memleak  cpp
+
+## Directory handling.
+gdirposx cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Expression evaluators.
+geval    cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gevalhum cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gevalrpn cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## File handling.
+gfile    cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gfilport cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gfilutl1 cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gfilutl2 cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## FTN address classes.
+gftnaddr cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Nodelist index access classes.
+gftnnl   cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gftnnlfd cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gftnnlfu cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gftnnlge cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gftnnlv7 cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Keyboard.
+gkbdunix cpp     all nov                         lnx                 be sun osx
+
+## Logfile class.
+glog     cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Misc. memory stuff.
+gmemdbg  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gmemutil cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Message attributes.
+gmsgattr cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Message handling.
+ghdrmime cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## GoldED printer definition strings.
+gprnutil cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## UNIX signals.
+gsigunix cpp     all nov                         lnx                 be sun osx
+
+## Sound.
+gsnd     cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gsndwrap cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Strings.
+gstrbags cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gstrctyp cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gstrmail cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gstrname cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gstrutil cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+## snprintf.c required by gstrutil.cpp and included in his file via preprocessor
+snprintf c
+
+## Time related.
+gtimjuld cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gtimutil cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Text searching.
+gbmh     cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gfuzzy   cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gregex   cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gwildmat cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gsearch  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Text processing.
+gtxtpara cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## BBS userbase access.
+gusrbase cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrezyc cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrgold cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrhuds cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrmax  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrpcb  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrra2  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gusrxbbs cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## Miscellaneous utility.
+gutlclip cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gutlcode cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gutlgrp  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gutlmisc cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gutlmtsk cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gutltag  cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gutlvers cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+gcharset cpp     all nov bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+## OS specific utilities
+gutldos  cpp     all                                     djg
+gutlos2  cpp     all         bco         wco         emx
+gutlos2m cpp     all         bco         wco         emx
+gutlwin  cpp     all             bcx                             cyg
+gutlwinm cpp     all             bcx                             cyg
+gutlunix cpp     all                             lnx                    sun osx
+gutlbeos cpp     all                                                 be
+be_lock  c       all                                                 be
+gespell  cpp     all ovl bcd bco bcx wcn wco wcx lnx emx djg rsx cyg be sun osx
+
+##  ------------------------------------------------------------------

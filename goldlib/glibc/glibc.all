@@ -1,0 +1,4 @@
+regex    cpp     all                                 emx         cyg
+fnmatch  c       all
+glob     c       all
+dummy    c       all nov bcd bco bcx wcn wco wcx lnx     djg rsx     be sun osx

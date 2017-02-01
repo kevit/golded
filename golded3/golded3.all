@@ -1,0 +1,87 @@
+
+##  ------------------------------------------------------------------
+##  GoldED+
+##  Copyright (C) 1990-1999 Odinn Sorensen
+##  Copyright (C) 1999-2000 Alexander S. Aganichev
+##  ------------------------------------------------------------------
+##  This program is free software; you can redistribute it and/or
+##  modify it under the terms of the GNU General Public License as
+##  published by the Free Software Foundation; either version 2 of the
+##  License, or (at your option) any later version.
+##
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+##  General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with this program; if not, write to the Free Software
+##  Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+##  MA 02111-1307 USA
+##  ------------------------------------------------------------------
+##  $Id: golded3.all,v 1.8 2009/12/16 13:18:20 rampitec Exp $
+##  ------------------------------------------------------------------
+##  Master build file.
+##  ------------------------------------------------------------------
+
+gcalst   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gcarea   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg0  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg1  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg2  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg3  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg4  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg5  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg6  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg7  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gccfgg8  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gckeys   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gclang   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gcmisc   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gealst   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gearea   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gecarb   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gecmfd   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gectnr   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gectrl   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gedoit   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gedoss   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geedit   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geedit2  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geedit3  cpp all nov bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gefile   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gefind   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geglob   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gehdre   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geinit   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geline   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gelmsg   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gemain   cpp all nov bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gemenu   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gemlst   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gemnus   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gemrks   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gemsgs   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+genode   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geplay   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gepost   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geqwks   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gerand   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geread   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geread2  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gescan   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gesrch   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gesoup   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+getpls   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geusrbse cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geutil   cpp all nov bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geutil2  cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+geview   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gmarea   cpp all ovl bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gehtml   cpp all nov bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+golded3  cpp all nov bcd bco bcx djg emx lnx rsx wcn wco wcx cyg be sun osx
+gedcyg   rc                                                  cyg
+gedemx   rc                          emx
+
+##  ------------------------------------------------------------------

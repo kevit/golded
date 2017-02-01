@@ -1,0 +1,65 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH RDDT 1 "September, 10 2005"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+rddt \- GoldEd+ route diagram drawing tool
+.SH SYNOPSIS
+.B rddt
+.RI < routefile "> [" "options" "] [" "address or name" ]
+.SH DESCRIPTION
+This manual page documents briefly the command line parameters of
+.BR rddt ,
+the route diagram drawing tool for GoldEd+.
+.\" This manual page was written for the Debian GNU/Linux distribution
+.\" because the original program does not have a manual page.
+.\" Instead, it has documention-in-progress that is copied to the
+.\" /usr/share/doc/goldedplus directory.
+.PP
+Rddt reads the output of GoldEd+'s READmakepathreport function.
+.SH OPTIONS
+.TP
+.B -d
+Reserved for debugging purposes.
+.TP
+.BI -i n
+Sets indent to
+.IR n .
+.TP
+.BI -l "link_address"
+This option used to specify your link address. Requires option
+.BR -n .
+.TP
+.BI -n "address"
+Use this option to specify your address.
+.TP
+.B -p
+Decode path.
+.TP
+If you specify any another option, RDDT will ignore it.
+.SH EXAMPLE
+.B RDDT path.rpt -n2:5020/604.19 -l2:5020/604 2:5020/604.19 -p
+.SH SEE ALSO
+.BR golded (1),
+.BR GoldED+\ Reference\ Manual.
+.SH AUTHOR
+GoldEd is copyright (C) 1990-1999 Odinn Sorensen
+.PP
+GoldEd+ is copyright (C) 1999-2001 Alexander S. Aganichev
+.PP
+GoldEd+ 1.1.5 is copyright (C) 2005 Stas Degteff and Golded+ team
+.PP
+This manual page was written by Peter Karlsson and updated by Stas Degteff

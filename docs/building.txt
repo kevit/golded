@@ -1,0 +1,160 @@
+
+GoldED+ compilation howto
+
+-------------------------------------------------------------------------------
+Table of contents
+
+1. Build Golded+ binaries using GNU C.
+2. Build Golded+/Win32 binaries using Microsoft Visual C.
+3. Build Golded+ distribution packages.
+4. Notes for RPM (DEB & etc.) builders.
+
+-------------------------------------------------------------------------------
+
+1. Build Golded+ binaries using GNU C.
+
+To compile GoldED+ and utilities you'll need:
+
+ - GNU C/C++ at least 2.95.4, gcc 3.x.x are recommended
+ - binutils: ar, ranlib, strip
+ - GNU make, GNU sed and GNU grep
+ - shell ans file utilities: cat, mkdir, echo, rm, [ AKA test (If it's is
+   internal commands of your shell, then these utilities don't needs.)
+ - (optional) GNU Groff - if you wants to make html or txt documentation
+   instead man pages
+ - vi, emacs, or any other editor you like
+ - beer or bear on your choice ;-)
+
+---- MINGW OVER CYGWIN ONLY ----
+Visits to http://www.cygwin.org/, download setup.exe and install Cygwin with
+following packages: bash, binutils, fileutils, gcc, gpp, grep, make, sed,
+sh-utils.
+----------- COMMON -------------
+
+---- DJGPP ONLY ----
+Visits to http://www.delorie.com/djgpp/ and download following packages: djdev,
+bash, binutils, fileutils, gcc, gpp, grep, make, sed, Sh-utils, ntlfn, Groff.
+Install these packages and run bash.
+------ COMMON ------
+
+First, edit GNUmakef.def for the preferrable compilation options.
+
+---- DJGPP ONLY ----
+When building in DJGPP environment you may wish to use liblocal which may be
+found on DJGPP site (visits a http://www.delorie.com/djgpp/ and locate for
+llocl02b.zip) or on Alexander S. Aganichev's personal page (direct link is
+http://aaganichev.narod.ru/djgpp/llocl02b.zip). This library provides basic
+locale support via country.sys driver. Otherwise just comment -llocal in
+GNUmakef.def.
+------ COMMON ------
+
+-- unix-like ONLY --
+When building in Linux, FreeBSD or another unix-like OS if you wants use
+unicode-compatible Golded+ then build Golded+ using ncurses v.5.x with
+libncursesw, a wide-characters ncurses version. (This issue is suggested
+by Dmitry Rodin 2:5020/5410@fidonet.)
+------ COMMON ------
+
+Now go to golded3 and copy mygolded.__h to mygolded.h and adjust it for
+yourself (put your name, FTN address and e-mail). Goto root again.
+
+Exec 'make' (or `gmake' on BSD). You may specify following parameters in the
+make call:
+
+ "BUILD=minimal"   Compile Golded+ with support only most popular formats of
+                   message bases (OPUS, Jam, Squish).
+
+ "USE_NCURSES=0"   if you dislike curses library (Linux version requires to
+                   use curses)
+
+ "WIDE_NCURSES=1"  if it is needed to use wide characters with curses library
+
+ "BUGGY_NCURSES=1" if Golded+ requires additional keypresses to pass areascan
+
+ "KOI8=1"          Better koi-8 support for linux. Do not set this for
+                   international builds since latin-1 support will be broken.
+
+ "ICONV=1"         Use iconv library for recoding text. Experimental! Do not
+                   set this if you don't sure!
+
+ "PLATFORM=xxx"    Overwrite platform auto detection. Here "xxx" may be:
+                   "cyg" - for MinGW or Cygwin (MinGW build),
+                   "lnx" - for GNU/Linux or any BSD,
+                   "emx" - for OS/2 EMX
+                   "sun" - for SunOS (Solaris)
+                   "osx" - for OS X
+                   "djg" - for DJGPP (DOS with DPMI)
+                   "be"  - for BeOS
+
+If you do not know that means the parameter, please do not specify it in
+command line.
+
+While make work, you may drink beer or play with bear until
+compilation in progress. But better - help your wife (if you have one) or
+wives (if you have more :)) with home work ;-)
+
+
+ls bin/
+
+You have to get ged{short-patform-name}, gn{short-patform-name}, and
+rddt{short-patform-name}. If so, you did it!
+
+
+2. Build Golded+/Win32 binaries using Microsoft Visual C.
+
+To compile GoldED+ and utilities you'll need Visual Studio 6.0 with Service
+Pack 5 or Visual Studio .NET.
+
+First, propetly install a following Visual Studio's components:
+- Visual C/C++ compiler;
+- Nmake utility.
+
+Next, copy golded3\mygolded.__h to golded3\mygolded.h and edit last to adjust
+it for yourself (put your name, FTN address and e-mail).
+
+Last, run following command:
+nmake /f golded.mak CFG="Release"
+and make some home work :) until compulation ends.
+
+Locate following files in Release\bin sub-directory: gedwin.exe, gnwin.exe and rddtwin.exe.
+If true - then you have Golded+/W32-MSVC :).
+
+
+3. Build Golded+ distribution packages.
+
+If you want to make binary package of Golded+ then you may call one of gp*.sh
+shell scripts:
+- dist-gps.sh to produce full sources package;
+- dist-gpc.sh to produce config files package;
+- dist-gpd.sh to produce DOS binaries package;
+- dist-gpv.sh to produce Win32 (MS Visual C) binaries package;
+- dist-gpw.sh to produce Win32 (MINGW32) binaries package;
+- dist-gpl.sh to produce linux binaries package;
+- dist-sx86.sh to produce Solaris/x86 binaries package.
+
+The InfoZIP archiver is required for make Win32, DOS, Solaris/x86 and config
+packages.
+TAR and BZip2 is required for make linux package.
+Iconv program is required for make russian documentation in several encodings
+in linux package.
+
+
+4. Notes for RPM (DEB & etc.) builders.
+
+Please constructs specs for build Golded+ 1.1.5 using following version
+numeration and naming style:
+
+Development (current) Golded+ 1.1.5 (snapshot of the Golded+):
+- version number: 1.1.5.0;
+- release name: string "currentYYYYMMDD", where YYYYMMDD is modification date
+of sources on cvs (you may look this date using `cvs log` command).
+
+Example of naming Golded+ snapshot RPM:
+Golded+ 1.1.5.0-current20061116
+
+Near future release of Golded+ 1.1.5:
+- version number: 1.1.5.1;
+- release name: "release".
+
+Example of naming Golded+ release RPM:
+Golded+ 1.1.5.1-release
